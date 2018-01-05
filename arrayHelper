@@ -1,0 +1,45 @@
+var numbers = [1,2,3];
+'numbers ' + numbers
+
+var sum = 0;
+function adder(number) {
+	sum += number;
+}
+
+numbers.forEach(adder);
+'sum ' + sum;
+
+var doubled = numbers.map((number) => {
+  return number * 2;
+});
+
+'doubled ' + doubled;
+
+///////////////////////////
+
+var cars = [
+  {model: 'car1', price: 100},
+  {model: 'car2', price: 200}
+];
+
+var prices = cars.map((car) => {
+  return car.price;
+});
+
+'prices ' + prices;
+
+////////////////////////////
+
+var paints = [ { color: 'red' }, { color: 'blue' }, { color: 'yellow' }];
+var colors = paints.map((paint) => {
+  return paint.color;
+});
+colors;
+
+function pluck(arrays, property) {
+  console.log('fffffffffffffff' + arrays);
+  return arrays.map((array) => {
+    return array[property];
+  });
+}
+pluck(paints, 'color');

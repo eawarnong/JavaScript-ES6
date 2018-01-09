@@ -33,7 +33,7 @@ export default VideoListItem;
 ///// Video Selection /////
 import React from 'react'
 
-const VideoListItem = ({ video }) => {
+const VideoListItem = ({ video, onVideoSelect }) => {
   const imageUrl = video.snippet.thumbnails.default.image;
   
   return (

@@ -16,7 +16,8 @@ import VideoListItem from './video_list_item.js';
 
 const VideoList = (props) => {
   const videoItems = props.videos.map((video) => {
-    return <VideoListItem video={video} />;
+    // define unique key for each video item
+    return <VideoListItem key={video.etag} video={video} />;
   });
   
   return (
@@ -27,3 +28,6 @@ const VideoList = (props) => {
 }
 
 export default VideoList;
+
+
+
